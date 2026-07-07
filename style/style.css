@@ -4,14 +4,29 @@ body{
     margin: 0;
     padding: 0;
 }
+
+.scheda{
+    top: 16%;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    display:grid;
+    grid-template-rows: 33% 1fr;
+    grid-template-columns: 50%, 1fr;
+    position: absolute;
+    bottom: 0;
+}
 header{
     border-bottom: white solid 2px;
     text-align: center;
     margin-bottom: 1%;
+    height: 9%;
+    padding: 0px;
 }
 
 button{
-    height: 200px;
+    height: 150px;
     width: 45%;
     margin: 2%;
     margin-right: 0;
@@ -20,6 +35,8 @@ button{
     border-color: white solid 2px;
     color:white;
     border-radius: 10px;
+    font-size: xx-large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .conteiner{
@@ -33,8 +50,10 @@ button:hover{
 @keyframes pulsanteToccato {
     0%{
         background-color: rgb(14, 7, 26);
+        transform: rotateZ(0'angle');
     }
     100%{
         background-color: blueviolet;
+        transform: rotateZ(360'angle');
     }
 }
