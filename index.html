@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ok Sound Board</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Ok Sound Board</h1>
+    </header>
+
+
+    <div class="continar">
+        <button onclick="riproduci('xfile.mp3')"><p>X File</p></button>
+        <button onclick="riproduci('spiderman.mp3')"><p>Spiderman</p></button>
+    </div>
+    <div class="continar">
+        <button onclick="riproduci('batman.mp3')"><p>Batman</p></button>
+        <button onclick="riproduci()"><p>Spiderman</p></button>
+    </div>
+
+    <script>
+        function riproduci(nomeFile) {
+            // Crea un nuovo oggetto Audio passando il percorso del file
+            const audio = new Audio("audio/"+nomeFile);
+            
+            // Avvia la riproduzione
+            audio.play()
+                .then(() => {
+                    console.log(`Riproduzione avviata: ${nomeFile}`);
+                })
+                .catch(error => {
+                    console.error("Errore durante la riproduzione:", error);
+                });
+        }
+    </script>
+</body>
+</html>
