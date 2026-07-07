@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(14, 7, 26);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+header{
+    border-bottom: white solid 2px;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+button{
+    height: 200px;
+    width: 45%;
+    margin: 2%;
+    margin-right: 0;
+    margin-left: 3%;
+    background-color: rgb(14, 7, 26);
+    border-color: white solid 2px;
+    color:white;
+    border-radius: 10px;
+}
+
+.conteiner{
+    margin:2%
+}
+
+button:hover{
+    animation: pulsanteToccato 1s ease;
+}
+
+@keyframes pulsanteToccato {
+    0%{
+        background-color: rgb(14, 7, 26);
+    }
+    100%{
+        background-color: blueviolet;
+    }
+}
