@@ -20,21 +20,30 @@
         </div>
         <div class="continar">
             <button onclick="riproduci('batman.mp3')"><strong><p>Batman</p></strong></button>
-            <button onclick="riproduci()"><strong><p>???</p></strong></button>
+            <button onclick="riproduci('fahhhhh.mp3')"><strong><p>Fahhhhh</p></strong></button>
         </div>
         <div class="continar">
-            <button onclick="riproduci()"><strong><p>???</p></strong></button>
-            <button onclick="riproduci()"><strong><p>???</p></strong></button>
+            <button onclick="riproduci('sigma.mp3')"><strong><p>Sigma</p></strong></button>
+            <button onclick="riproduci('flauto_harry_potter.mp3')"><strong><p>Herry</p></strong></button>
         </div>
     </div>
 
     <script>
+        // 1. Dichiariamo una variabile esterna per salvare l'audio corrente
+        let audioCorrente = null;
+
         function riproduci(nomeFile) {
-            // Crea un nuovo oggetto Audio passando il percorso del file
-            const audio = new Audio("audio/"+nomeFile);
+            // 2. Se c'è già un audio in riproduzione, lo fermiamo e lo resettiamo
+            if (audioCorrente) {
+                audioCorrente.pause();
+                audioCorrente.currentTime = 0; // Riporta la traccia all'inizio
+            }
+
+            // 3. Creiamo il nuovo oggetto Audio e lo assegniamo alla variabile globale
+            audioCorrente = new Audio("audio/" + nomeFile);
             
-            // Avvia la riproduzione
-            audio.play()
+            // 4. Avvia la riproduzione
+            audioCorrente.play()
                 .then(() => {
                     console.log(`Riproduzione avviata: ${nomeFile}`);
                 })
